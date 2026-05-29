@@ -80,7 +80,7 @@ def lint_file(file_path, fix=False):
     pattern_latin_cjk = re.compile(rf'({latin_or_num}|`)({cjk_char})')
 
     # 2. Number and physical unit spacing (e.g., 10Gbps -> 10 Gbps)
-    pattern_num_unit = re.compile(r'(\d+)(Gbps|Mbps|TB|GB|MB|KB|B|GHz|MHz|Hz|px|em|rem|vh|vw|s|ms|mm|cm|m|km|μm|um|nm|μs|us|ns|kg|g|mg|μg|ug|L|mL|μL|uL)\b', re.IGNORECASE)
+    pattern_num_unit = re.compile(r'(\d+)(Gbps|Mbps|TB|GB|MB|KB|B|GHz|MHz|Hz|px|em|rem|vh|vw|s|ms|mm|cm|m|km|μm|um|nm|μs|us|ns|kg|g|mg|μg|ug|L|mL|μL|uL|oz|lb)\b', re.IGNORECASE)
 
     # 3. Number and degree/percentage (no space) (e.g., 15 % -> 15%)
     pattern_no_space_unit = re.compile(r'(\d+)\s+([%°])')
